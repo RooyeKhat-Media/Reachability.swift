@@ -8,6 +8,16 @@ Inspired by https://github.com/tonymillion/Reachability
 
 # IMPORTANT
 
+## Swift 4
+
+The develop branch has been updated to Swift 4. As of Xcode 9.0 beta, there are no breaking changes. To use this version of Reachability.swift in your app:
+### CocoaPods
+```
+pod 'ReachabilitySwift', :branch => 'develop'
+```
+### Carthage
+Add `github "ashleymills/Reachability.swift" "develop"` to your Cartfile.
+
 ## Supporting Swift 2.3 and Swift 3
 
 The source has been updated to support both Swift 2.3 (tag v2.4) and Swift 3 (tag v3.0)  
@@ -200,7 +210,7 @@ and for stopping notifications
 
 ```swift
 reachability.stopNotifier()
-NSNotificationCenter.defaultCenter().removeObserver(self,
+NSNotificationCenter.default.removeObserver(self,
                                                     name: ReachabilityChangedNotification,
                                                     object: reachability)
 ```
